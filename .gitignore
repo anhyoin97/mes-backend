@@ -1,0 +1,28 @@
+# STS & Eclipse
+.classpath
+.project
+.settings/
+bin/
+target/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+log/
+*.log
+*.war
+
+# Lombok
+lombok.config
+
+# Environment
+*.env
+
+# DB, PW
+application.properties
