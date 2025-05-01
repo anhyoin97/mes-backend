@@ -6,3 +6,6 @@
 ## 2일차 진행 내용 
 [![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-20C997?style=flat-square&logo=velog&logoColor=white&link=https://velog.io/@kjr04205/2%EC%9D%BC%EC%B0%A8-Spring-Boot-JPA%EB%A1%9C-REST-API-%EB%A7%8C%EB%93%A4%EA%B8%B0)](https://velog.io/@kjr04205/2%EC%9D%BC%EC%B0%A8-Spring-Boot-JPA%EB%A1%9C-REST-API-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
+## 3일차 진행 내용 
+[![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-20C997?style=flat-square&logo=velog&logoColor=white&link=https://velog.io/@kjr04205/3%EC%9D%BC%EC%B0%A8-Spring-Boot-JPA-Swagger-%EC%A0%81%EC%9A%A9-%EB%B2%84%EC%A0%84-%EC%9D%B4%EC%8A%88%EA%B9%8C%EC%A7%80-%ED%95%B4%EA%B2%B0)](https://velog.io/@kjr04205/3%EC%9D%BC%EC%B0%A8-Spring-Boot-JPA-Swagger-%EC%A0%81%EC%9A%A9-%EB%B2%84%EC%A0%84-%EC%9D%B4%EC%8A%88%EA%B9%8C%EC%A7%80-%ED%95%B4%EA%B2%B0)
+
