@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import com.example.demo.entity.User;
 import com.example.demo.repository.UserRepository;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class SpringJpaExampleApplication {
 
 	public static void main(String[] args) {
@@ -16,16 +16,16 @@ public class SpringJpaExampleApplication {
 	}
 	
 	// 이 Bean은 프로그램 실행 직후 실행
-	@Bean
-	public CommandLineRunner demo(UserRepository userRepository) {
-		return (args) -> {
-			User user = new User();
-			user.setName("테스터");
-			user.setEmail("ahi1105@kakao.com");
-			
-			userRepository.save(user);
-			System.out.println("사용자 정보 저장 완료.");
-		};
-	}
+//	@Bean
+//	public CommandLineRunner demo(UserRepository userRepository) {
+//		return (args) -> {
+//			User user = new User();
+//			user.setName("테스터");
+//			user.setEmail("ahi1105@kakao.com");
+//			
+//			userRepository.save(user);
+//			System.out.println("사용자 정보 저장 완료.");
+//		};
+//	}
 
 }

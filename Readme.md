@@ -9,3 +9,5 @@
 ## 3일차 진행 내용 
 [![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-20C997?style=flat-square&logo=velog&logoColor=white&link=https://velog.io/@kjr04205/3%EC%9D%BC%EC%B0%A8-Spring-Boot-JPA-Swagger-%EC%A0%81%EC%9A%A9-%EB%B2%84%EC%A0%84-%EC%9D%B4%EC%8A%88%EA%B9%8C%EC%A7%80-%ED%95%B4%EA%B2%B0)](https://velog.io/@kjr04205/3%EC%9D%BC%EC%B0%A8-Spring-Boot-JPA-Swagger-%EC%A0%81%EC%9A%A9-%EB%B2%84%EC%A0%84-%EC%9D%B4%EC%8A%88%EA%B9%8C%EC%A7%80-%ED%95%B4%EA%B2%B0)
 
+## 4일차 진행 내용 : 프로젝트 시작
+[![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-20C997?style=flat-square&logo=velog&logoColor=white&link=https://velog.io/@kjr04205/4%EC%9D%BC%EC%B0%A8-%ED%86%A0%EC%9D%B4%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%A4%EA%B3%84-%EB%B0%8F-API-%EA%B5%AC%EC%84%B1)](https://velog.io/@kjr04205/4%EC%9D%BC%EC%B0%A8-%ED%86%A0%EC%9D%B4%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%A4%EA%B3%84-%EB%B0%8F-API-%EA%B5%AC%EC%84%B1)
