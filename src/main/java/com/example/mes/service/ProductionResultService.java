@@ -2,9 +2,12 @@ package com.example.mes.service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 import org.springframework.stereotype.Service;
 
+import com.example.mes.dto.DefectTrendDto;
 import com.example.mes.entity.Equipment;
 import com.example.mes.entity.ProductionResult;
 import com.example.mes.entity.WorkOrder;
@@ -23,7 +26,8 @@ public class ProductionResultService {
     private final WorkOrderRepository workOrderRepository;
 
     public List<ProductionResult> getAllResults() {
-        return resultRepository.findAll();
+	    return StreamSupport.stream(resultRepository.findAll().spliterator(), false)
+	                        .collect(Collectors.toList());
     }
 
     public ProductionResult recordResult(Long equipmentId, Long workOrderId, int producedQty, int defectiveQty,
@@ -44,5 +48,13 @@ public class ProductionResultService {
         result.setEndTime(endTime);
 
         return resultRepository.save(result);
+    }
+    
+    public List<DefectTrendDto> getDefectTrendLast7Days() {
+        List<Object[]> rawResults = resultRepository.findDefectTrendLast7DaysRaw();
+
+        return rawResults.stream()
+                .map(row -> new DefectTrendDto((String) row[0], ((Number) row[1]).doubleValue()))
+                .toList();
     }
 }

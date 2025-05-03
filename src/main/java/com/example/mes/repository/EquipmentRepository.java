@@ -7,4 +7,5 @@ import com.example.mes.entity.Equipment;
 
 @Repository
 public interface EquipmentRepository extends JpaRepository<Equipment, Long> {
+	long countByStatus(String status);
 }
