@@ -17,3 +17,6 @@
 
 ## 5일차 진행 내용 : 대시보드 API, UI 구현
 [![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-20C997?style=flat-square&logo=velog&logoColor=white&link=https://velog.io/@kjr04205/5%EC%9D%BC%EC%B0%A8-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-API-UI-%EA%B5%AC%ED%98%84)](https://velog.io/@kjr04205/5%EC%9D%BC%EC%B0%A8-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-API-UI-%EA%B5%AC%ED%98%84)
+
+## 6일차 진행 내용 : 대시보드 Chart UI 개선
+[![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-20C997?style=flat-square&logo=velog&logoColor=white&link=https://velog.io/@kjr04205/6%EC%9D%BC%EC%B0%A8-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-Chart-UI-%EA%B0%9C%EC%84%A0)](https://velog.io/@kjr04205/6%EC%9D%BC%EC%B0%A8-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-Chart-UI-%EA%B0%9C%EC%84%A0)
