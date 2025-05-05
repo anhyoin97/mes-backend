@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.mes.dto.WorkOrderRequest;
 import com.example.mes.entity.WorkOrder;
 import com.example.mes.service.WorkOrderService;
 
@@ -31,11 +32,11 @@ public class WorkOrderController {
     }
 
     @PostMapping
-    public ResponseEntity<WorkOrder> createOrder(@RequestBody Map<String, Object> body) {
-        Long productId = Long.valueOf(body.get("productId").toString());
-        int quantity = (int) body.get("quantity");
-        String status = body.get("status").toString();
-        LocalDateTime dueDate = LocalDateTime.parse(body.get("dueDate").toString());
+    public ResponseEntity<WorkOrder> createOrder(@RequestBody WorkOrderRequest req) {
+    	Long productId = req.getProductId();
+        int quantity = req.getQuantity();
+        String status = req.getStatus();
+        LocalDateTime dueDate = LocalDateTime.parse(req.getDueDate());
 
         WorkOrder created = workOrderService.createOrder(productId, quantity, dueDate, status);
         return ResponseEntity.ok(created);

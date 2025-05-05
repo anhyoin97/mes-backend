@@ -1,13 +1,14 @@
 package com.example.mes.service;
 
-import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 import org.springframework.stereotype.Service;
 
 import com.example.mes.dto.DefectTrendDto;
+import com.example.mes.dto.ProductionResultRequest;
+import com.example.mes.dto.ProductionResultResponse;
 import com.example.mes.entity.Equipment;
 import com.example.mes.entity.ProductionResult;
 import com.example.mes.entity.WorkOrder;
@@ -25,29 +26,38 @@ public class ProductionResultService {
     private final EquipmentRepository equipmentRepository;
     private final WorkOrderRepository workOrderRepository;
 
-    public List<ProductionResult> getAllResults() {
-	    return StreamSupport.stream(resultRepository.findAll().spliterator(), false)
-	                        .collect(Collectors.toList());
+    public List<ProductionResultResponse> getAllResults() {
+    	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
+
+        return resultRepository.findAll().stream()
+                .map(result -> new ProductionResultResponse(
+                        result.getId(),
+                        result.getWorkOrder().getProduct().getName(),
+                        result.getEquipment().getName(),
+                        result.getProducedQty(),
+                        result.getDefectiveQty(),
+                        result.getStartTime().format(formatter),
+                        result.getEndTime().format(formatter)
+                ))
+                .collect(Collectors.toList());
     }
 
-    public ProductionResult recordResult(Long equipmentId, Long workOrderId, int producedQty, int defectiveQty,
-                                         LocalDateTime startTime, LocalDateTime endTime) {
+    public ProductionResult createResult(ProductionResultRequest dto) {
+        WorkOrder workOrder = workOrderRepository.findById(dto.getWorkOrderId())
+            .orElseThrow(() -> new IllegalArgumentException("작업지시 없음"));
 
-        Equipment equipment = equipmentRepository.findById(equipmentId)
-                .orElseThrow(() -> new IllegalArgumentException("Equipment not found"));
-
-        WorkOrder workOrder = workOrderRepository.findById(workOrderId)
-                .orElseThrow(() -> new IllegalArgumentException("WorkOrder not found"));
+        Equipment equipment = equipmentRepository.findById(dto.getEquipmentId())
+            .orElseThrow(() -> new IllegalArgumentException("설비 없음"));
 
         ProductionResult result = new ProductionResult();
-        result.setEquipment(equipment);
         result.setWorkOrder(workOrder);
-        result.setProducedQty(producedQty);
-        result.setDefectiveQty(defectiveQty);
-        result.setStartTime(startTime);
-        result.setEndTime(endTime);
+        result.setEquipment(equipment);
+        result.setProducedQty(dto.getQuantity());
+        result.setDefectiveQty(dto.getDefectCount());
+        result.setStartTime(dto.getStartTime());
+        result.setEndTime(dto.getEndTime());
 
-        return resultRepository.save(result);
+        return resultRepository.save(result); 
     }
     
     public List<DefectTrendDto> getDefectTrendLast7Days() {

@@ -20,3 +20,6 @@
 
 ## 6일차 진행 내용 : 대시보드 Chart UI 개선
 [![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-20C997?style=flat-square&logo=velog&logoColor=white&link=https://velog.io/@kjr04205/6%EC%9D%BC%EC%B0%A8-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-Chart-UI-%EA%B0%9C%EC%84%A0)](https://velog.io/@kjr04205/6%EC%9D%BC%EC%B0%A8-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-Chart-UI-%EA%B0%9C%EC%84%A0)
+
+## 7일차 진행 내용 : 전체 화면 완성, 공통 UI 리팩토링
+[![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-20C997?style=flat-square&logo=velog&logoColor=white&link=https://velog.io/@kjr04205/7%EC%9D%BC%EC%B0%A8-%EC%A0%84%EC%B2%B4-%ED%99%94%EB%A9%B4-%EC%99%84%EC%84%B1-%EA%B3%B5%ED%86%B5-UI-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81)](https://velog.io/@kjr04205/7%EC%9D%BC%EC%B0%A8-%EC%A0%84%EC%B2%B4-%ED%99%94%EB%A9%B4-%EC%99%84%EC%84%B1-%EA%B3%B5%ED%86%B5-UI-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81)

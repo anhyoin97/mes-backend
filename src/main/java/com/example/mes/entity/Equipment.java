@@ -24,5 +24,7 @@ public class Equipment {
 
     private String location;
 
-    private String status; //가동, 정지, 고장
+    private String status; 
+    
+    private String code;
 }

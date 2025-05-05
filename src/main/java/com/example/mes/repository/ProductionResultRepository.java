@@ -1,11 +1,13 @@
 package com.example.mes.repository;
 
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
-import com.example.mes.entity.ProductionResult;
 import java.util.List;
 
-public interface ProductionResultRepository extends CrudRepository<ProductionResult, Long> {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.example.mes.entity.ProductionResult;
+
+public interface ProductionResultRepository extends JpaRepository<ProductionResult, Long> {
 
     @Query(value = """
         SELECT DATE_FORMAT(start_time, '%Y-%m-%d') AS date, 
