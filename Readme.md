@@ -23,3 +23,9 @@
 
 ## 7일차 진행 내용 : 전체 화면 완성, 공통 UI 리팩토링
 [![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-20C997?style=flat-square&logo=velog&logoColor=white&link=https://velog.io/@kjr04205/7%EC%9D%BC%EC%B0%A8-%EC%A0%84%EC%B2%B4-%ED%99%94%EB%A9%B4-%EC%99%84%EC%84%B1-%EA%B3%B5%ED%86%B5-UI-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81)](https://velog.io/@kjr04205/7%EC%9D%BC%EC%B0%A8-%EC%A0%84%EC%B2%B4-%ED%99%94%EB%A9%B4-%EC%99%84%EC%84%B1-%EA%B3%B5%ED%86%B5-UI-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81)
+
+## 8일차 진행 내용 : Spring Security, JWT 토큰방식 로그인 구현
+[![Tech Blog Badge](https://img.shields.io/badge/-Tech%20blog-20C997?style=flat-square&logo=velog&logoColor=white&link=https://velog.io/@kjr04205/8%EC%9D%BC%EC%B0%A8-JWT-%ED%86%A0%ED%81%B0%EB%B0%A9%EC%8B%9D-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84)](https://velog.io/@kjr04205/8%EC%9D%BC%EC%B0%A8-JWT-%ED%86%A0%ED%81%B0%EB%B0%A9%EC%8B%9D-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84)
+
+
+
