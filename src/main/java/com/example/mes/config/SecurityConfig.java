@@ -3,6 +3,7 @@ package com.example.mes.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
@@ -30,20 +31,23 @@ public class SecurityConfig {
 	@Autowired
     private final CustomUserDetailsService userDetailsService;
 
-    @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        return http
-            .csrf(csrf -> csrf.disable())
-            .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/login", "/signup").permitAll()
-                .anyRequest().authenticated()
-            )
-            .authenticationProvider(authenticationProvider()) 
-            .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider, userDetailsService),
-                             UsernamePasswordAuthenticationFilter.class)
-            .build();
-    }
+	@Bean
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+	    return http
+	    	.cors().and()
+	        .csrf(csrf -> csrf.disable())
+	        .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+	        .authorizeHttpRequests(auth -> auth
+        	    .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+        	    .requestMatchers(HttpMethod.POST, "/login").permitAll() 
+        	    .requestMatchers("/signup").permitAll()
+        	    .anyRequest().authenticated()
+        	)
+	        .authenticationProvider(authenticationProvider())
+	        .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider, userDetailsService),
+	                         UsernamePasswordAuthenticationFilter.class)
+	        .build();
+	}
 
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {

@@ -23,12 +23,16 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private final CustomUserDetailsService userDetailsService;
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    FilterChain filterChain)
-        throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+    	String path = request.getRequestURI();
 
-        String authHeader = request.getHeader("Authorization");
+        // 로그인 요청은 JWT 검사 없이 다음 필터로 넘김
+        if ("/auth/login".equals(path)) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+    	
+    	String authHeader = request.getHeader("Authorization");
 
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             String token = authHeader.substring(7);
